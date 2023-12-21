@@ -15,7 +15,6 @@ export const useHomeScreen = () => {
     axios
       .get(`https://gorest.co.in/public/v2/posts?page=${page}&per_page=20`)
       .then(response => {
-        console.log('resp', response);
         const data = response.data;
         if (data?.length === 0) {
           setHasMore(false);
